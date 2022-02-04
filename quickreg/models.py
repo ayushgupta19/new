@@ -11,6 +11,7 @@ class User(models.Model):
     name= models.CharField(max_length=70)
     email=models.EmailField(max_length=100)
     phone = models.BigIntegerField()
+
     typ = models.TextField(blank=True)
     col =models.CharField(max_length=50, choices= sup, default= 'gashu7320@gmail.com')
     text =models.CharField(max_length=8)
