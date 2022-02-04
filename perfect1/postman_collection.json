@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "debdf65e-6e2c-4d2f-9a6f-8d234c93c01b",
+		"name": "Hubbler Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/v1/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRFToken",
+						"value": "xjbEg6ZDJUPjktLcNV6NmmFqK2Ly1frP7qBviIupXSJlNZ3IQHC6n9gBiphaKgS8",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "csrftoken=xjbEg6ZDJUPjktLcNV6NmmFqK2Ly1frP7qBviIupXSJlNZ3IQHC6n9gBiphaKgS8;",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"postman\",\n    \"email\": \"test@gmail.com\",\n    \"phone\": \"98728394124\",\n    \"typ\": \"joey\",\n    \"col\": \"gashu7320@gmail.com\",\n    \"text\": \"test text\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/v1/user/create/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"user",
+						"create",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all form fields",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/v1/form/fields/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"form",
+						"fields",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user form field",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/v1/form/fields/2/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"form",
+						"fields",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
