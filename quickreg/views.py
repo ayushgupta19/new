@@ -7,7 +7,7 @@ from .models import User, Emailtemplate
 from .forms import StudentRegistration, mailregister
 from django.http import JsonResponse
 from django.core import serializers
-from django.core.mail import send_mail
+from django.core.mail import EmailMessage
 
 
 
@@ -102,8 +102,10 @@ def maildata(request):
                 s=s.replace(value, str(eval('ud.%s'%ukey)))
 
 
-            send_mail(s, bdy, 'faqritesh@gmail.com', [obj.to])
-
+            
+            eml=EmailMessage(subject=s,body=bdy,from_email='faqritesh@gmail.com',to=[obj.to],cc=[obj.CC])
+            eml.send()
+            
             return JsonResponse({'kk':True})
     else:
         fm = mailregister()    

@@ -3,7 +3,7 @@ from django.db import models
 from django.forms import Textarea
 
 # Create your models here.
-sup=(("gashu7320@gmail.com","Manager"),("aayushgupta.gupta594@gmail.com", "Assigner"), ("faqritesh@gmail.com", "Creator"))
+sup=(("sreehari@hubbler.mobi","Manager"),("aayushgupta.gupta594@gmail.com", "Assigner"), ("faqritesh@gmail.com", "Creator"))
 
 
 # Create your models here.
